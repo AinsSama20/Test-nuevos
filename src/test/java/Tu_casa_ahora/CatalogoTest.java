@@ -10,8 +10,8 @@ import io.github.bonigarcia.wdm.WebDriverManager;
 public class CatalogoTest {
     WebDriver driver;
 
-    WebDriverManager wdm = WebDriverManager.chromedriver().browserInDocker();
-    //WebDriverManager wdm = WebDriverManager.firefoxdriver().browserInDocker();
+    // WebDriverManager wdm = WebDriverManager.chromedriver().browserInDocker();
+    WebDriverManager wdm = WebDriverManager.firefoxdriver().browserInDocker();
 
     @BeforeEach
     void setupTest() {

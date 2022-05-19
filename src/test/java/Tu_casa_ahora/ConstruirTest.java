@@ -22,7 +22,7 @@ public class ConstruirTest {
     @Test
     void test() {
 
-        driver.get("http://tu-casa-ahora2.s3-website-us-east-1.amazonaws.com/construir-inmueble");
+        driver.get("https://tu-casa-ahora2-qa.ide-solution.com/construir-inmueble");
         assertThat(driver.getTitle()).contains("Tu Casa Ahora");
         JavascriptExecutor js = (JavascriptExecutor)driver;
 
@@ -37,7 +37,7 @@ public class ConstruirTest {
             Thread.sleep(1*1000);
 
             Select tipo_documento_propietario = new Select(driver.findElement(By.id("documentoConstruccion")));
-            tipo_documento_propietario.selectByValue("4");
+            tipo_documento_propietario.selectByValue("1");
             Thread.sleep(1*1000);
 
             WebElement n_documento = driver.findElement(By.id("n_documento"));
@@ -61,19 +61,19 @@ public class ConstruirTest {
             Thread.sleep(1*1000);
 
             Select tipo_contruccion = new Select(driver.findElement(By.xpath("//select[@id='tipo_construccion']")));
-            tipo_contruccion.selectByValue("86");
+            tipo_contruccion.selectByValue("4");
             Thread.sleep(1*1000);
 
             Select departamento = new Select(driver.findElement(By.id("departamento")));
-            departamento.selectByValue("1");
+            departamento.selectByValue("14");
             Thread.sleep(1*1000);
 
             Select provincia = new Select(driver.findElement(By.id("provincia")));
-            provincia.selectByValue("1");
+            provincia.selectByValue("125");
             Thread.sleep(1*1000);
 
             Select dist_id = new Select(driver.findElement(By.id("distrito")));
-            dist_id.selectByValue("1");
+            dist_id.selectByValue("140101");
             Thread.sleep(1*1000);
 
             WebElement direccion = (driver.findElement(By.id("direccion_cons")));

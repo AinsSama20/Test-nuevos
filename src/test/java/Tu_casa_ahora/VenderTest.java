@@ -22,12 +22,13 @@ public class VenderTest {
     @Test
     void test() {
 
-        driver.get("http://tu-casa-ahora2.s3-website-us-east-1.amazonaws.com/vender-inmueble");
+        // driver.get("http://tu-casa-ahora2.s3-website-us-east-1.amazonaws.com/vender-inmueble");
+        driver.get("https://tu-casa-ahora2-qa.ide-solution.com/vender-inmueble");
         JavascriptExecutor js = (JavascriptExecutor)driver;
 
         try{
 
-            Thread.sleep(60*1000);
+            Thread.sleep(10*1000);
 
             WebElement Element1 = driver.findElement(By.xpath("/html/body/app-root/app-home/app-vender-inmueble/div[1]/div/div[3]/div/div[1]/label"));
 
@@ -104,7 +105,7 @@ public class VenderTest {
             Thread.sleep(1*1000);
 
             Select tipo_documento = new Select(driver.findElement(By.id("tipo_documento")));
-            tipo_documento.selectByValue("4");
+            tipo_documento.selectByValue("1");
             Thread.sleep(1*1000);
 
             WebElement n_documento = driver.findElement(By.id("n_documento"));

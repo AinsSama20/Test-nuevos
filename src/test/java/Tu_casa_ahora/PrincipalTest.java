@@ -11,7 +11,7 @@ public class PrincipalTest {
     
     WebDriver driver;
 
-    WebDriverManager wdm = WebDriverManager.chromedriver().browserInDocker().avoidDockerLocalFallback();
+    WebDriverManager wdm = WebDriverManager.chromedriver().browserInDocker();
 
     @BeforeEach
     void setupTest() {
@@ -26,7 +26,8 @@ public class PrincipalTest {
     @Test
     void test() throws InterruptedException {
 
-        driver.get("http://tu-casa-ahora2.s3-website-us-east-1.amazonaws.com");
+        // driver.get("http://tu-casa-ahora2.s3-website-us-east-1.amazonaws.com");
+        driver.get("https://tu-casa-ahora2-qa.ide-solution.com/");
         assertThat(driver.getTitle()).contains("Tu Casa Ahora");
         Thread.sleep(10*1000);
 

@@ -26,7 +26,9 @@ public class CatalogoTest {
     @Test
     void test() {
         // Exercise
-        driver.get("http://tu-casa-ahora2.s3-website-us-east-1.amazonaws.com/detalle-catalogo/2");
+        // driver.get("http://tu-casa-ahora2.s3-website-us-east-1.amazonaws.com/detalle-catalogo/2");
+        driver.get("https://tu-casa-ahora2-qa.ide-solution.com/detalle-catalogo/1");
+
         //driver.manage().window().maximize();
         //String title = driver.getTitle();
         JavascriptExecutor js = (JavascriptExecutor)driver;

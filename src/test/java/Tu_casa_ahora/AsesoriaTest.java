@@ -23,7 +23,8 @@ public class AsesoriaTest {
     @Test
      void test() {
 
-        driver.get("http://tu-casa-ahora2.s3-website-us-east-1.amazonaws.com/asesorialegal");
+        // driver.get("http://tu-casa-ahora2.s3-website-us-east-1.amazonaws.com/asesorialegal");
+        driver.get("https://tu-casa-ahora2-qa.ide-solution.com/asesorialegal");
         assertThat(driver.getTitle()).contains("Tu Casa Ahora");
         JavascriptExecutor js = (JavascriptExecutor)driver;
 
@@ -63,7 +64,7 @@ public class AsesoriaTest {
             js.executeScript("arguments[0].scrollIntoView();", Element2);
 
             Select tipo_documento_propietario = new Select(driver.findElement(By.id("tipo_documento_propietario")));
-            tipo_documento_propietario.selectByValue("4");
+            tipo_documento_propietario.selectByValue("1");
             Thread.sleep(1*1000);
 
             WebElement n_documento = driver.findElement(By.id("n_documento"));

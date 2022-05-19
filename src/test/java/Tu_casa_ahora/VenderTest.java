@@ -45,7 +45,7 @@ public class VenderTest {
             Thread.sleep(1*1000);
 
             Select tipo_inmueble = new Select(driver.findElement(By.id("tipo_inmueble")));
-            tipo_inmueble.selectByValue("-1");
+            tipo_inmueble.selectByValue("1");
             Thread.sleep(1*1000);
 
             WebElement tamanio_inmueble = (driver.findElement(By.id("tamanio_inmueble")));
